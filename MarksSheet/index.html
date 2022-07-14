@@ -4,10 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markssheet App Using Javascript</title>
+    <title>Markssheet</title>
+
 </head>
 <body>
-    <h1>Markssheet App Using Javascript</h1>    
+    <div class="group">
+        <h1>Percentage Calculator</h1>
+            <table border="0">
+                <form onsubmit="calculate(); return false;" id="avgForm">
+                    <tr>
+                        <thead>
+                            <th>SUBJECT</th>
+                            <th>TOTAL MARKS</th>
+                            <th>MARKS OBTAINED</th>
+                            <th>PERCENTAGE</th>
+                            <th>GRADE</th>
+                        </thead>
+                    </tr>
+                    <tr>
+                        <th>English</th>
+                        <td><input type="number" min="0" required id="engTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="1" > </td>
+                        <td><input type="number" min="0" required id="engMarks" class="subjects" placeholder="Enter your Marks" tabindex="2"></td>
+                        <td><label for="Percengtage" id="engPerc"></label>
+                        <td><label for="Grade" id="engGrade"></label></td>
+                    </tr>
+                    <tr>
+                        <th>Mathematics</th>
+                        <td><input type="number" min="0" required id="mathTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="3"></td>
+                        <td><input type="number" min="0" required id="mathMarks" class="subjects" placeholder="Enter your Marks" tabindex="4"></td>
+                        <td><label for="Percengtage" id="mathPerc"></label>
+                        <td><label for="Grade" id="mathGrade"></label></td>
+                    <tr>
+                        <th>Urdu</th>
+                        <td><input type = "number" min="0" required id="urduTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="5"></td>
+                        <td><input type="number" min="0" required id="urduMarks" class="subjects" placeholder="Enter your Marks" tabindex="6"></td>
+                        <td><label for="Percengtage" id="urduPerc"></label>
+                        <td><label for="Grade" id="urduGrade"></label></td>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit" id="subButton">Submit</button></td>
+                        <td><button type="submit" id="resetButton">Reset</button></td>    
+                    </tr>
+                </form>
+            </table>
+        <h1 id="totalMarks"></h1>
+        <h1 id="marksObatained"></h1>
+        <h1 id="marksPerc"></h1>
+    </div>
+
+    <script>
+        function calculate() {
+            let urduTotNum = parseFloat(document.querySelector("#mathTotMarks").value);
+            let urduNum =  parseFloat(document.querySelector("#mathMarks").value);
+
+            let engTotNum = parseFloat(document.querySelector("#engTotMarks").value);
+            let engNum = parseFloat(document.querySelector("#engMarks").value);
+
+            let mathTotNum = parseFloat(document.querySelector("#urduTotMarks").value);
+            let mathNum = parseFloat(document.querySelector("#urduMarks").value);
+
+            let totNumber = urduTotNum + engTotNum + mathTotNum
+            let numberObtained = urduNum+engNum+mathNum;
+            let result = parseFloat(numberObtained / totNumber * 100);
+
+            document.querySelector("#totalMarks").innerHTML=`Total Marks: ${totNumber}`;
+            document.querySelector("#marksObatained").innerHTML=`Total Marks Obtained: ${numberObtained}`;
+            document.querySelector("#marksPerc").innerHTML=`Your Percentage is ${result}%`;
+        }
+    </script>
     
 </body>
 </html>
