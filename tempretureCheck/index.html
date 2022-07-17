@@ -4,29 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tempreture App Using Javascript</title>
-    <style>
-        #myImage{
-            width: 200px;
-            height: 200px;
-            background-size: cover;
-        }
-        
-    </style>
+    <title>Tempreture App Using Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animatedText.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="button.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>tempreture App Using Javascript</h1>
+    <div class="waviy">
+        <span style="--a:1">T</span>
+        <span style="--i:2">E</span>
+        <span style="--i:3">M</span>
+        <span style="--i:4">P</span>
+        <span style="--i:5">R</span>
+        <span style="--i:6">E</span>
+        <span style="--i:7">T</span>
+        <span style="--i:8">U</span>
+        <span style="--i:9">R</span>
+        <span style="--i:10">E</span>
+        <span style="--i:11">&nbsp;</span>
+        <span style="--i:12">A</span>
+        <span style="--i:13">P</span>
+        <span style="--i:14">P</span>
+    </div>
 
-    <form onsubmit="conditionCheck(); return false;" id="tempForm">
-        <label for="temp">Tempreture</label>
-        <input type="text" id="temp" type="number" autofocus required>
+    <!-- <h1>tempreture App Using Javascript</h1> -->
 
-        <input type="submit" value="Check">
+    <form onsubmit="conditionCheck(); return false;" class="tempForm">
+        <label for="temp"></label>
+        <input type="text" id="temp" type="number" placeholder="Enter Tempreture...">
+
+        <input type="submit" value="Check" class="checkButton">
     </form>
 
-    <h2 id = "result"></h2>
-    <img id="myImage" src="" alt="" >
-    <img id="your-image-id" src="" >
+    <section>
+        <h2 id = "result"></h2>
+        <img id="myImage" src="" alt="" >
+        <!-- <img id="your-image-id" src="" > -->
+    </section>
 
     <script>
         function conditionCheck() {

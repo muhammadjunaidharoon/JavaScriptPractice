@@ -1,0 +1,29 @@
+.waviy {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+}
+
+.waviy span {
+    font-family:'Gochi Hand', cursive;
+    padding: 1%;
+    font-size: 40px;
+    text-transform: uppercase;
+    animation: flip 1s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+
+
+  @keyframes flip {
+    0%,80% {
+      transform:  rotateX(360deg) 
+    }
+  }
+
+  @media only screen and (max-width: 575px){
+    .waviy span {
+        padding: 0%;
+        text-transform: lowercase;
+    }
+}

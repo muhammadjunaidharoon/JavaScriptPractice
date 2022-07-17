@@ -1,0 +1,26 @@
+/*CSS on Check Button*/
+
+input.checkButton{
+    font-family:'Gochi Hand', cursive;
+    padding: 15px 25px;
+    font-size: 24px;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+ 
+  }
+  
+  
+.checkButton:hover {
+    background-color: #3e8e41
+}
+
+.checkButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
