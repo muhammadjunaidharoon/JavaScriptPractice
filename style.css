@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("\images\WeatherGifImage"); */
 }
+
 
 .head-container{
     margin: 0px;
@@ -60,7 +62,17 @@ body {
     }
 }
 
+/* .space{
+        margin-bottom: 0%;
+
+} */
+
 .flex-container{
+    margin: 10% 0%;
+    /* margin */
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
 
 }
 
@@ -75,7 +87,17 @@ body {
     color: black;
 }
 
-.flex-item>a:hover{
+/* .flex-item>a:hover{
     background-color: blue;
     color: white;
+} */
+
+.appImage{
+    width: 150px;
+    height: 150px;
+}
+
+footer>h1{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
 }
