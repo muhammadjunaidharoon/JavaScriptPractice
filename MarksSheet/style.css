@@ -1,0 +1,27 @@
+.body{
+    width: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mainHeading{
+    background-color: #005555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainBox{
+    display: flex;
+    border: 1px solid black;
+    background-color: #1acbcb;
+    width: 50%;
+    padding: 10px;
+
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+}

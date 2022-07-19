@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap");
+
+
+
+h2 {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  padding: 50px;
+  /* display: flex; */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  font-family: "Mr Dafoe";
+  font-size: 5.5em;
+  color: white;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1 ;
+  text-align: center;
+  /* transform: rotate(-7deg); */
+}

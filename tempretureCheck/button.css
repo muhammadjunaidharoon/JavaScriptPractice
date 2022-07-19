@@ -1,5 +1,8 @@
 /*CSS on Check Button*/
 
+#temp{
+  margin: 10px;
+}
 input.checkButton{
     font-family:'Gochi Hand', cursive;
     padding: 15px 25px;
