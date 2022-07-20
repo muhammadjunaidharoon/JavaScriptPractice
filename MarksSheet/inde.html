@@ -10,130 +10,83 @@
 
 </head>
 <body>
-    <header class="myHeading">
+    <div class="mainHeading">
+            <!-- <h2 class="heading">Marksheet by Javascript</h2> -->
+        <h3>Marksheet by Javascript</h3>
+        <div class="mainBox">
+            <form onsubmit="calculate(); return false;" id="avgForm">
+                <!-- <div class="firstrow">
+                    <label for="english" class="firstColum">English</label>
+                    <input type="number" class="secondColum"min="0" max="100" required id="engTotMarks" class="subjects" title="Total Marks" value="100" tabindex="1" >
+                    <input type="number" class="thirdColum"min="0" max="100" required id="engMarks" class="subjects" placeholder="Enter your Marks" tabindex="2" autofocus onkeyup="engGradeFunc()">
+                    <label for="Percengtage" class="forthColum" id="engPerc"></label>
+                    <label for="Grade" class="fifthColum" id="engGrade"></label>
+                </div> -->
+
+                <div class="firstrow">
+                    <label for="english" >English</label>
+                    <input type="number" min="0" max="100" required id="engTotMarks" class="subjects" title="Total Marks" value="100" tabindex="1" >
+                    <input type="number" min="0" max="100" required id="engMarks" class="subjects" placeholder="Enter your Marks" tabindex="2" autofocus onkeyup="engGradeFunc()">
+                    <label for="Percengtage"  id="engPerc">Percengtage</label>
+                    <label for="Grade" id="engGrade">grade</label>
+                </div>
+
+                <br> <br>
+
+                <label for="mathematics" class="firstColum">Mathematics</label>
+                <input type="number" class="secondColum" min="0" max="100" required id="mathTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="3">
+                <input type="number" class="thirdColum" min="0" max="100" required id="mathMarks" class="subjects" placeholder="Enter your Marks" tabindex="4">
+                <label for="Percengtage" class="forthColum" id="mathPerc"></label>
+                <label for="Grade" class="fifthColum" id="mathGrade"></label>
+    
+            </form>
+        </div>
+
+    </div>
+
+    <!-- <header class="myHeading">
         <h2 class="heading">Marksheet by Javascript</h2>
         <div class="group">
-            <table border="0">
-                <form onsubmit="calculate(); return false;" id="avgForm">
-                    <tr>
-                        <thead>
-                            <th>SUBJECT</th>
-                            <th>TOTAL MARKS</th>
-                            <th>MARKS OBTAINED</th>
-                            <th>PERCENTAGE</th>
-                            <th>GRADE</th>
-                        </thead>
-                    </tr>
-                    <tr>
-                        <th>English</th>
-                        <td><input type="number" min="0" max="100" required id="engTotMarks" class="subjects"  value="100" tabindex="1" > </td>
-                        <td><input type="number" min="0" max="100" required id="engMarks" class="subjects"  tabindex="2" autofocus></td>
-                        <td><label for="Percengtage" id="engPerc"></label>
-                        <td><label for="Grade" id="engGrade"></label></td>
-                    </tr>
-                    <tr>
-                        <th>Mathematics</th>
-                        <td><input type="number" min="0" max="100" required id="mathTotMarks" class="subjects"  value="100" tabindex="3"></td>
-                        <td><input type="number" min="0" max="100" required id="mathMarks" class="subjects"  tabindex="4"></td>
-                        <td><label for="Percengtage" id="mathPerc"></label>
-                        <td><label for="Grade" id="mathGrade"></label></td>
-                    <tr>
-                        <th>Urdu</th>
-                        <td><input type = "number" min="0" max="100" required id="urduTotMarks" class="subjects"  value="100" tabindex="5"></td>
-                        <td><input type="number" min="0" max="100" required id="urduMarks" class="subjects"  tabindex="6"></td>
-                        <td><label for="Percengtage" id="urduPerc"></label>
-                        <td><label for="Grade" id="urduGrade"></label></td>
-                    <tr>
-                        <td></td>
-                        <td><button type="submit" id="subButton">Submit</button></td>
-                        <td><button type="submit" id="resetButton">Reset</button></td>    
-                    </tr>
-                </form>
-            </table>
-            <div class="resultScreen">
-                <h1 id="totalMarks"></h1>
-                <h1 id="marksObatained"></h1>
-                <h1 id="marksPerc"></h1>
-                <h1 id="marksGrade"></h1>
-            </div>
+            <form onsubmit="calculate(); return false;" id="avgForm">
+                <label for="english" >English</label>
+                <input type="number" min="0" max="100" required id="engTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="1" >
+                <input type="number" min="0" max="100" required id="engMarks" class="subjects" placeholder="Enter your Marks" tabindex="2" autofocus>
+                <label for="Percengtage" id="engPerc"></label>
+                <label for="Grade" id="engGrade"></label>
+
+                <br> <br>
+
+                <label for="mathematics" >Mathematics</label>
+                <input type="number" min="0" max="100" required id="mathTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="3">
+                <input type="number" min="0" max="100" required id="mathMarks" class="subjects" placeholder="Enter your Marks" tabindex="4">
+                <label for="Percengtage" id="mathPerc"></label>
+                <label for="Grade" id="mathGrade"></label>
+
+                <br> <br>
+
+                <label for="urdu" >Urdu</label>
+                <input type = "number" min="0" max="100" required id="urduTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="5">
+                <input type="number" min="0" max="100" required id="urduMarks" class="subjects" placeholder="Enter your Marks" tabindex="6">
+                <label for="Percengtage" id="urduPerc"></label>
+                <label for="Grade" id="urduGrade"></label>
+
+                <br> <br>
+                <button type="submit" id="subButton">Submit</button>
+                <button type="submit" id="resetButton">Reset</button>
+
+            </form>
+
+            <h1 id="totalMarks"></h1>
+            <h1 id="marksObatained"></h1>
+            <h1 id="marksPerc"></h1>
+            <h1 id="marksGrade"></h1>
         </div>
     </header>
 
-    <script>
-        function calculate() {
-            let engTotNum = parseInt(document.querySelector("#engTotMarks").value);
-            let engNum = parseInt(document.querySelector("#engMarks").value);
-                let engPerc = parseInt(engNum / engTotNum * 100);
-                    if (engPerc >= 80){
-                        document.querySelector("#engGrade").innerHTML='A1'; 
-                    } else if (engPerc < 80 && engPerc >=70){
-                        document.querySelector("#engGrade").innerHTML='A';
-                    } else if (engPerc < 70 && engPerc >=60){
-                        document.querySelector("#engGrade").innerHTML='B';
-                    } else if (engPerc < 60 && engPerc >=50){
-                        document.querySelector("#engGrade").innerHTML='C';
-                    } else if (engPerc < 50 ){
-                        document.querySelector("#engGrade").innerHTML='Failed';
-                    }
+    <script src="markssheet.js"></script> -->
+    <script src="keyupfunc.js"></script>
+<script>
 
-            let urduTotNum = parseInt(document.querySelector("#urduTotMarks").value);
-            let urduNum = parseInt(document.querySelector("#urduMarks").value);
-                let urduPerc =parseInt( urduNum / urduTotNum * 100);
-                if (urduPerc >= 80){
-                        document.querySelector("#urduGrade").innerHTML='A1'; 
-                    } else if (urduPerc < 80 && urduPerc >=70){
-                        document.querySelector("#urduGrade").innerHTML='A';
-                    } else if (urduPerc < 70 && urduPerc >=60){
-                        document.querySelector("#urduGrade").innerHTML='B';
-                    } else if (urduPerc < 60 && urduPerc >=50){
-                        document.querySelector("#urduGrade").innerHTML='C';
-                    } else if (urduPerc < 50 ){
-                        document.querySelector("#urduGrade").innerHTML='Failed';
-                    }
-
-            let mathTotNum = parseInt(document.querySelector("#mathTotMarks").value);
-            let mathNum =  parseInt(document.querySelector("#mathMarks").value);
-            let mathPerc  = parseInt(mathNum / mathTotNum * 100);
-            if (mathPerc >= 80){
-                        document.querySelector("#mathGrade").innerHTML='A1'; 
-                    } else if (mathPerc < 80 && mathPerc >=70){
-                        document.querySelector("#mathGrade").innerHTML='A';
-                    } else if (mathPerc < 70 && mathPerc >=60){
-                        document.querySelector("#mathGrade").innerHTML='B';
-                    } else if (mathPerc < 60 && mathPerc >=50){
-                        document.querySelector("#mathGrade").innerHTML='C';
-                    } else if (mathPerc < 50 ){
-                        document.querySelector("#mathGrade").innerHTML='Failed';
-                    }
-
-
-            let totNumber = urduTotNum + engTotNum + mathTotNum
-            let numberObtained = urduNum+engNum+mathNum;
-            let result = parseInt(numberObtained / totNumber * 100);
-
-            document.querySelector("#engPerc").innerHTML=`${engPerc}%`;
-            document.querySelector("#mathPerc").innerHTML=`${mathPerc}%`;
-            document.querySelector("#urduPerc").innerHTML=`${urduPerc}%`;
-
-
-            document.querySelector("#totalMarks").innerHTML=`Total Marks: ${totNumber}`;
-            document.querySelector("#marksObatained").innerHTML=`Total Marks Obtained: ${numberObtained}`;
-            document.querySelector("#marksPerc").innerHTML=`Your Percentage is ${result}%`;
-
-            if (result >= 80){
-                document.querySelector("#marksGrade").innerHTML='Congratulation!!! You have A1 Grade... You are awsome'; 
-            } else if (result < 80 && result >=70){
-                document.querySelector("#marksGrade").innerHTML='Congratulation!!! You have A Grade... You are Excellent';
-            } else if (result < 70 && result >=60){
-                document.querySelector("#marksGrade").innerHTML='Congratulation!!! You have B Grade.... Great! Keep it up';
-            } else if (result < 60 && result >=50){
-                document.querySelector("#marksGrade").innerHTML='Congratulation!!! You have C Grade.... Work More';
-            } else if (result < 50 ){
-                document.querySelector("#marksGrade").innerHTML='I am Sorry!!! You are Failed.... :(';
-            }
-        }
-
-    </script>
-    
+</script>
 </body>
 </html>
