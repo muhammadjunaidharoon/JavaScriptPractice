@@ -26,21 +26,21 @@
                     </tr>
                     <tr>
                         <th>English</th>
-                        <td><input type="number" min="0" max="100" required id="engTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="1" > </td>
-                        <td><input type="number" min="0" max="100" required id="engMarks" class="subjects" placeholder="Enter your Marks" tabindex="2" autofocus></td>
+                        <td><input type="number" min="0" max="100" required id="engTotMarks" class="subjects"  value="100" tabindex="1" > </td>
+                        <td><input type="number" min="0" max="100" required id="engMarks" class="subjects"  tabindex="2" autofocus></td>
                         <td><label for="Percengtage" id="engPerc"></label>
                         <td><label for="Grade" id="engGrade"></label></td>
                     </tr>
                     <tr>
                         <th>Mathematics</th>
-                        <td><input type="number" min="0" max="100" required id="mathTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="3"></td>
-                        <td><input type="number" min="0" max="100" required id="mathMarks" class="subjects" placeholder="Enter your Marks" tabindex="4"></td>
+                        <td><input type="number" min="0" max="100" required id="mathTotMarks" class="subjects"  value="100" tabindex="3"></td>
+                        <td><input type="number" min="0" max="100" required id="mathMarks" class="subjects"  tabindex="4"></td>
                         <td><label for="Percengtage" id="mathPerc"></label>
                         <td><label for="Grade" id="mathGrade"></label></td>
                     <tr>
                         <th>Urdu</th>
-                        <td><input type = "number" min="0" max="100" required id="urduTotMarks" class="subjects" placeholder="Total Marks" value="100" tabindex="5"></td>
-                        <td><input type="number" min="0" max="100" required id="urduMarks" class="subjects" placeholder="Enter your Marks" tabindex="6"></td>
+                        <td><input type = "number" min="0" max="100" required id="urduTotMarks" class="subjects"  value="100" tabindex="5"></td>
+                        <td><input type="number" min="0" max="100" required id="urduMarks" class="subjects"  tabindex="6"></td>
                         <td><label for="Percengtage" id="urduPerc"></label>
                         <td><label for="Grade" id="urduGrade"></label></td>
                     <tr>
@@ -50,18 +50,20 @@
                     </tr>
                 </form>
             </table>
-            <h1 id="totalMarks"></h1>
-            <h1 id="marksObatained"></h1>
-            <h1 id="marksPerc"></h1>
-            <h1 id="marksGrade"></h1>
+            <div class="resultScreen">
+                <h1 id="totalMarks"></h1>
+                <h1 id="marksObatained"></h1>
+                <h1 id="marksPerc"></h1>
+                <h1 id="marksGrade"></h1>
+            </div>
         </div>
     </header>
 
     <script>
         function calculate() {
-            let engTotNum = parseFloat(document.querySelector("#engTotMarks").value);
-            let engNum = parseFloat(document.querySelector("#engMarks").value);
-                let engPerc = engNum / engTotNum * 100
+            let engTotNum = parseInt(document.querySelector("#engTotMarks").value);
+            let engNum = parseInt(document.querySelector("#engMarks").value);
+                let engPerc = parseInt(engNum / engTotNum * 100);
                     if (engPerc >= 80){
                         document.querySelector("#engGrade").innerHTML='A1'; 
                     } else if (engPerc < 80 && engPerc >=70){
@@ -74,9 +76,9 @@
                         document.querySelector("#engGrade").innerHTML='Failed';
                     }
 
-            let urduTotNum = parseFloat(document.querySelector("#urduTotMarks").value);
-            let urduNum = parseFloat(document.querySelector("#urduMarks").value);
-                let urduPerc = urduNum / urduTotNum * 100
+            let urduTotNum = parseInt(document.querySelector("#urduTotMarks").value);
+            let urduNum = parseInt(document.querySelector("#urduMarks").value);
+                let urduPerc =parseInt( urduNum / urduTotNum * 100);
                 if (urduPerc >= 80){
                         document.querySelector("#urduGrade").innerHTML='A1'; 
                     } else if (urduPerc < 80 && urduPerc >=70){
@@ -89,9 +91,9 @@
                         document.querySelector("#urduGrade").innerHTML='Failed';
                     }
 
-            let mathTotNum = parseFloat(document.querySelector("#mathTotMarks").value);
-            let mathNum =  parseFloat(document.querySelector("#mathMarks").value);
-            let mathPerc  = mathNum / mathTotNum * 100;
+            let mathTotNum = parseInt(document.querySelector("#mathTotMarks").value);
+            let mathNum =  parseInt(document.querySelector("#mathMarks").value);
+            let mathPerc  = parseInt(mathNum / mathTotNum * 100);
             if (mathPerc >= 80){
                         document.querySelector("#mathGrade").innerHTML='A1'; 
                     } else if (mathPerc < 80 && mathPerc >=70){
@@ -107,7 +109,7 @@
 
             let totNumber = urduTotNum + engTotNum + mathTotNum
             let numberObtained = urduNum+engNum+mathNum;
-            let result = parseFloat(numberObtained / totNumber * 100);
+            let result = parseInt(numberObtained / totNumber * 100);
 
             document.querySelector("#engPerc").innerHTML=`${engPerc}%`;
             document.querySelector("#mathPerc").innerHTML=`${mathPerc}%`;
