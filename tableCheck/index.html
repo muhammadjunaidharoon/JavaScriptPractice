@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply Table by javascript</title>
+    <style>
+            #mtable {
+              font-family: Arial, Helvetica, sans-serif;
+              border-collapse: collapse;
+              width: 30%;
+            }
+
+            /* #mtable td, #mtable th {
+              border: 1px solid #ddd;
+              padding: 8px;
+              }
+            #mtable tr:nth-child(even){background-color: #FFF8DC;}
+
+            #mtable tr:hover {background-color: #F5DEB3;} */
+    </style>
+</head>
+<body>
+    <h2>MULTIPLY TABLE</h2>
+    
+    <div class="inputForm">
+        <form onsubmit="multiplyPerform(); return false;" class="inputForm">
+            <label for="table">Which table you want?</label>
+            <input type="number" placeholder="Which table you want?" required id="table">  <br> <br>
+            <label for="multiply">How much time to multiply?</label>
+            <input type="number" placeholder="How much time to multiply?" required id="multiply"> <br> <br>
+
+            <input type="submit" value="Submit" class="checkButton">
+        </form>
+    </div>
+
+    <!-- <section>
+        <p id="outPut"></p>
+    </section> -->
+    <div id="result"></div>
+
+
+    <script>
+        function multiplyPerform(){
+            let number=[0,1];
+            // let perform = 0;
+            number[0]=document.querySelector("#table").value;
+            number[1]=document.querySelector("#multiply").value;
+            // console.log (number[0]);
+            // console.log (number[1]);
+
+            if (number[0]==null || number[0]==""){
+                alert='Number required';
+            } else {
+                 if (number[1]==null || number[1]==""){ 
+                    number[1]=10
+                 }
+
+                 var table;
+                table='<table id="mtable">';
+
+
+                for (let perform = 1; perform <=number[1]; perform++){
+                    let outPut=number[0] * perform;
+                    table+='<tr><td>'+number[0]+' * '+perform+' = '+number[0]*perform+'</td></tr>';
+                    // console.log (`${number[0]} x ${perform} = ${outPut}`);
+                    // document.querySelector("#outPut").innerHTML=
+                    // (`${number[0]} x ${perform} = ${outPut}`);;
+                }
+            }
+            table+='</table>';
+            document.getElementById("result").innerHTML = table;
+ 
+        }
+    </script>
+</body>
+</html>
