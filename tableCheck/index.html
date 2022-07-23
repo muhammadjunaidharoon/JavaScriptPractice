@@ -63,10 +63,10 @@
 
                 for (let perform = 1; perform <=number[1]; perform++){
                     let outPut=number[0] * perform;
-                    table+='<tr><td>'+number[0]+' * '+perform+' = '+number[0]*perform+'</td></tr>';
+                    // table+='<tr><td>'+number[0]+' * '+perform+' = '+number[0]*perform+'</td></tr>';
                     // console.log (`${number[0]} x ${perform} = ${outPut}`);
-                    // document.querySelector("#outPut").innerHTML=
-                    // (`${number[0]} x ${perform} = ${outPut}`);;
+                    document.querySelector("#outPut").innerHTML+=
+                    (`${number[0]} x ${perform} = ${number[0] * perform}`);;
                 }
             }
             table+='</table>';
