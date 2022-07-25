@@ -5,31 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Multiply Table</title>
-    <style>
-        #mtable{
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 30%;
-        }
-        #mtable td, #mtable th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        #mtable tr:nth-child(even)
-        {background-color: #FFF8DC;}
-
-        #mtable tr:hover 
-        {background-color: #F5DEB3;} 
-    </style>
 </head>
 <body>
 
     <form onsubmit="checkTable(); return false;" class="inputForm">
         <label for="numberInput">Which Table you want?</label>
-        <input id="numberInput" value="10" type="number" name="input" required>
+        <input id="numberInput" type="number" name="input" required>
         <br>
         <label for="multiplyTime">How much time to multiply?</label>
-        <input id="multiplyTime" value="10" type="number" name="input">
+        <input id="multiplyTime" type="number" name="input">
         <br>
         <button type="submit">Submit</button>
     </form>
@@ -37,13 +21,10 @@
     <div id="result"></div>
 
     <script>
-        window.onload = checkTable;
         function checkTable(){
             document.querySelector("#result").innerHTML = ""
             let numberInput = +document.getElementById('numberInput').value;
             let multiplyTime = +document.getElementById('multiplyTime').value;
-            var table = '<table id="mtable">';
-
 
             if (multiplyTime==null || multiplyTime==""){
                 multiplyTime=10;
@@ -53,16 +34,13 @@
                 document.querySelector("#result").innerHTML=`<h1> Input required</h1>`;
             } else {
                 for (let i = 0; i < multiplyTime; i++) {
-//                    document.querySelector("#result").innerHTML += `<h3> ${numberInput} x ${i+1} = ${numberInput * (i+1)} </h3> `;
-                        table+= `<tr><td> ${numberInput} x ${i+1} = ${numberInput * (i+1)} </td></tr> `;
+                    // console.log (numberInput + ' x = ' + numberInput * (i+1));
+                    // console.log (`${numberInput} x ${i+1} = ${input * (i+1)} `);
+                    document.querySelector("#result")
+                        .innerHTML += `<h3> ${numberInput} x ${i+1} = ${numberInput * (i+1)} </h3> `;
                 }
             }
-            table+='</table>';
-
-            document.querySelector("#result")
-                        .innerHTML = table;
-
         }
-            </script>
+    </script>
 </body>
 </html>

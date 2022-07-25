@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Map in Javascript</title>
+</head>
+<body>
+    <h1>Array Map in Javascript</h1>
+<!-- Calculate Percentage -->
+<!-- Show Grade -->
+
+
+    <script>
+        let marks = [10, 10, 10, 10, 10];
+        let totObtMarks=0
+
+        marks.map ((eachValue, index)=>{
+            totObtMarks += eachValue;
+        })
+
+        document.write (`Marks Obtained by Map: ${totObtMarks *  100 / 100}`) + '<br/>';
+
+        totObtMarks= marks.reduce((accmulator, currentValue) =>{
+            return accmulator + currentValue;
+        })
+            // totObtMarks+= (accmulator + currentValue);
+            console.log(`Marks Obtained by Reducer: ${totObtMarks *  100 / 100}`);
+            document.write (`Marks Obtained by Map: ${totObtMarks *  100 / 100}`);
+        // array.reduce(reducer);
+
+        const array = [5, 5, 5, 5, 5];
+
+function reducer(previous, current, index) {
+  const returns = previous + current;
+  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+  return returns;
+}
+
+array.reduce(reducer);
+
+    </script>
+
+
+
+</body>
+</html>
