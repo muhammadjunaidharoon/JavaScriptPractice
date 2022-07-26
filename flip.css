@@ -26,7 +26,12 @@
     /* -webkit-backface-visibility: hidden; */
     backface-visibility: hidden;
   }
-  
+
+  .flip-box-front{
+    background-size: cover;
+    /* Repeat : No repeat ; */
+    Position :centre ;    
+  }
   .flip-box-front {
     background-color: #bbb;
     color: black;
