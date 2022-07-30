@@ -5,130 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matric Add Substract</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Matrix Add / Subtract</h1>
+    <div class="main">
+        <form onsubmit="processMatrix(event); return false;" class="inputForm">        
+            
+            <div>
+                <label for="">Matrix 1</label>
+                <br>
 
-<form onsubmit="addMatric(); return false;" class="inputForm">
-    <table border="1px">
-        <tr>
-            <td>First Number</td>
-            <td>Second Number</td>
-        </tr>
-        <tr>
-            <td><input id="firstNumber_Zero" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Zero" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>
-            <td><input id="firstNumber_One" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_One" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Two" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Two" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Three" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Three" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Four" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Four" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Five" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Five" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Six" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Six" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Seven" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Seven" value = 0 type="number" name="input" required></td>
-        </tr>
-        <tr>        
-            <td><input id="firstNumber_Eight" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Eight" value = 0 type="number" name="input" required></td>
-        </tr>        
-        <tr>        
-            <td><input id="firstNumber_Nine" value = 0 type="number" name="input" required></td>
-            <td><input id="secondNumber_Nine" value = 0 type="number" name="input" required></td>
-        </tr>        
-        <tr><td><button type="submit">Add</button></tr>
-        <td><button type="submit">Subtract</button></td></tr>
-    </table>    
-</form>
+                <input name = "m1" type="number" value = "2" id ="m100">
+                <input name = "m1" type="number" value = "2" id ="m101">
+                <input name = "m1" type="number" value = "2" id ="m102">
 
-<!-- <form onsubmit="addMatric(); return false;" class="inputForm">
-        <label for="numberInput">First Number</label>
-        <input id="firstNumber_Zero" value = 0 type="number" name="input" required>
-        <input id="firstNumber_One" value = 0 type="number" name="input" required>
-        <input id="firstNumber_Two" value = 0 type="number" name="input" required>
+                <br>
 
-        <label for="numberInput">Second Number</label>
-        <input id="secondNumber_Zero" value = 0 type="number" name="input" required>
-        <input id="secondNumber_One" value = 0 type="number" name="input" required>
-        <input id="secondNumber_Two" value = 0 type="number" name="input" required>
+                <input name = "m1" type="number" value = "2" id ="m110">
+                <input name = "m1" type="number" value = "2" id ="m111">
+                <input name = "m1" type="number" value = "2" id ="m112">
 
-        <button type="submit">Submit</button>
+                <br>
 
-    </form> -->
-    <div id="result1"></div>
-    <div id="result2"></div>
+                <input name = "m1" type="number" value = "2" id ="m120">
+                <input name = "m1" type="number" value = "2" id ="m121">
+                <input name = "m1" type="number" value = "2" id ="m122">
+            </div>
+
+            <div>
+                <label for="">Matrix 2 </label>
+                <br>
+
+                <input name = "m2" type="number" value = "1" id="m200">
+                <input name = "m2" type="number" value = "1" id="m201">
+                <input name = "m2" type="number" value = "1" id="m202">
+
+                <br>
+
+                <input name = "m2" type="number" value = "1" id="m210">
+                <input name = "m2" type="number" value = "1" id="m211">
+                <input name = "m2" type="number" value = "1" id="m212">
+
+                <br>
+
+                <input name = "m2" type="number" value = "1" id="m220">
+                <input name = "m2" type="number" value = "1" id="m221">
+                <input name = "m2" type="number" value = "1" id="m222">
+            </div>
+
+            <div>
+                <button type="submit">Sum</button>
+                <button type="submit">Subtract</button>
+            </div>
+
+        </form>
+
+        <div class="result">
+            <label for="">Result</label>
+            <br>
+
+            <input name = "mr" disabled type="number" id="r00">
+            <input name = "mr" disabled type="number" id="r01">
+            <input name = "mr" disabled type="number" id="r02">
+
+            <br>
+
+            <input name = "mr" disabled type="number" id="r10">
+            <input name = "mr" disabled type="number" id="r11">
+            <input name = "mr" disabled type="number" id="r12">
+
+            <br>
+
+            <input name = "mr" disabled type="number" id="r20">
+            <input name = "mr" disabled type="number" id="r21">
+            <input name = "mr" disabled type="number" id="r22">
+        </div>
+    </div>
+
+ 
+    <!-- <div id="result1"></div> -->
+    <!-- <div id="result2"></div> -->
 
     <script>
-        function addMatric(){
+        //    window.onload = processMatrix();
+        
+        function processMatrix(e){
+            
+            //METHOD 1 GET BY NAME
+            // let allInputOfM1 = document.getElementsByName("m1");
+            // let allInputOfM2 = document.getElementsByName("m2");
+                    // let result = document.getElementsByName("mr");
+                
+                
+                    // for (let i = 0; i < allInputOfM1.length; i++){
+                    //     // console.log (allInputOfM1[i].value);
+                    //     // console.log (allInputOfM2[i].value);
+                    //     if (e.submitter.innerText.toLowerCase() === "sum"){
+                        //         result[i].value = Number(allInputOfM1[i].value) + Number(allInputOfM2[i].value);
+                        //     }else {
+                            //         result[i].value = Number(allInputOfM1[i].value) - Number(allInputOfM2[i].value);
+                            //     }        
+                            // }
+                            
+                            
+            //METHOD 1 GET BY ID
+            // let matrixInput1 = [];
+            // let matrixInput2 = [];
+            let resultMatrix = [];
+            for (let i = 0; i < 3; i++){
+                    for (let j = 0; j < 3; j++){
+                    
+                            // if (!matrixInput1[i]) matrixInput1[i] = [];
+                            // if (!matrixInput2[i]) matrixInput2[i] = [];
+                            if (!resultMatrix[i]) resultMatrix[i] = [];
+                            // console.log (`#m1${i}${j}`);
+                            // matrixInput1[i][j] = (document.querySelector(`#m1${i}${j}`).value);
+                            // matrixInput2[i][j] = (document.querySelector(`#m2${i}${j}`).value);
+                            // resultMatrix[i][j] = Number(document.querySelector(`#m1${i}${j}`).value) + Number(document.querySelector(`#m1${i}${j}`).value);
+                            // console.log (resultMatrix[i][j]);
+                            if (e.submitter.innerText.toLowerCase() === "sum"){
+                                document.querySelector(`#r${i}${j}`).value = 
+                                    Number(document.querySelector(`#m1${i}${j}`).value) + Number(document.querySelector(`#m2${i}${j}`).value);;
+                            }else {
+                                document.querySelector(`#r${i}${j}`).value = 
+                                    Number(document.querySelector(`#m1${i}${j}`).value) - Number(document.querySelector(`#m2${i}${j}`).value);;
+                            }
+                    
+                        }
+                    }   
+            //     console.log ("matrix 1: " + matrixInput1);
+            //     console.log ("matrix 2: " + matrixInput2);
+            
+        
+            // console.log ("result: " + result);
+            
+            
+            
+            // console.log (e.submitter.innerText);
 
-            let result="";
 
-            let firstNumber=[
-                [
-                    +document.getElementById('firstNumber_Zero').value,
-                    +document.getElementById('firstNumber_One').value,
-                    +document.getElementById('firstNumber_Two').value
-                ]
-            ]
-
-            let secondNumber=[
-                [
-                    +document.getElementById('secondNumber_Zero').value,
-                    +document.getElementById('secondNumber_One').value,
-                    +document.getElementById('secondNumber_Two').value
-                ]
-            ]
-           
-            for (let i =0; i<firstNumber.length; i++){
-                for (let j =0; j<firstNumber[i].length; j++){
-                    result+= `<h3>${firstNumber[i][j] + secondNumber[i][j]} </h3>`;
-                }
-            }
-            document.querySelector("#result1").innerHTML=result;
-            // result="";
-            // result+= `<h3>${secondNumber[0][0]} </h3>`;
-            // result+= `<h3>${secondNumber[0][1]} </h3>`;
-            // result+= `<h3>${secondNumber[0][2]} </h3>`;
-            // document.querySelector("#result2").innerHTML=result;
-
-            // document.querySelector("#result").innerHTML=firstNumber[0][0];
-            // document.querySelector("#result").innerHTML=firstNumber[0][1];
-            // document.querySelector("#result").innerHTML=firstNumber[0][2];
         }
-
-            //         console.log(firstArray[i][j]);
-
-        // let secondArray=[
-        //     [2, 3],
-        //     [4, 1],
-        //     [0, 2],
-        // ]
-
-        // for (let i = 0; i < firstArray.length; i++){
-        //     for (let j = 0; j <  firstArray[i].length; j++){
-        //         console.log(firstArray[i][j]);
-        //     // console.log(`firstArray[${i}][${j}]:  ${myArray[i][j]}`);
-        //     }
-        // }
-
 
 
     </script>

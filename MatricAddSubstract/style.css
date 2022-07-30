@@ -1,0 +1,52 @@
+body  {
+    background-color: #cccccc;
+  }
+  
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inputForm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.inputForm>div{
+    border: 1px solid red;
+    padding: 15px;
+    margin: 15px;
+    /* width: 300px;
+    margin-top: 10px; */
+}
+
+.inputForm>div>button{
+    margin: 10px;
+    width: 75px;
+
+}
+
+.inputForm>div:last-child{
+    border: 0px;
+}
+
+.inputForm>div>input{
+    margin: 5px;
+    width: 35px;
+    /* padding: 5px;
+    height: 10px; */
+}
+
+.result{
+    border: 1px solid green;
+    padding: 15px;
+    margin: 15px;
+}
+
+.result>input{
+    margin: 5px;
+    width: 35px;
+    /* padding: 5px;
+    height: 10px; */
+}
