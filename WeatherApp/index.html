@@ -7,58 +7,114 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Weather App</title>
-</head>
-<body>
- 
+  </head>
+  <body>
+    
+   
     <div class="main">
-        <header><i class='bx bx-left-arrow-alt'></i>Weather App</header>
-        <section class="input-part">
-            <p class="info-txt">Please enter a valid city name</p>
-            <input type="text" placeholder="City name" name="" id="cityName" required>
-            <div class="separator"></div>
-            <button>Current Location</button>
-        </section>
-
-        <!-- <section class="weather-part">
-            <img src="./images/ThunderStorm.png" alt="Weather Icon">
-            <div class="temp">
-              <span class="numb">_</span>
-              <span class="deg">°</span>C
-            </div>
-            <div class="weather">_ _</div>
-            <div class="location">
-              <i class='bx bx-map'></i>
-              <span>_, _</span>
-            </div>
-            <div class="bottom-details">
-              <div class="column feels">
-                <i class='bx bxs-thermometer'></i>
-                <div class="details">
-                  <div class="temp">
-                    <span class="numb-2">_</span>
-                    <span class="deg">°</span>C
-                  </div>
-                  <p>Feels like</p>
-                </div>
+      <header><i class='bx bx-left-arrow-alt'></i>Weather App</header>
+      <section class="input-part">
+        <p class="info-txt">Please enter a valid city name</p>
+        <input type="text" placeholder="City name" name="" id="cityName">
+        <div class="separator"></div>
+        <button>Current Location</button>
+      </section>
+      
+      <section class="weather-part">
+        <img src="./images/ThunderStorm.png" alt="Weather Icon">
+        <div class="temp">
+          <span class="numb">20</span>
+          <span class="deg">°</span>C
+        </div>
+        <div class="weather">_ _</div>
+        <div class="location">
+          <i class='bx bx-map'></i>
+          <span>_, _</span>
+        </div>
+        <div class="bottom-details">
+          <div class="column feels">
+            <i class='bx bxs-thermometer'></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">25</span>
+                <span class="deg">°</span>C
               </div>
-              <div class="column humidity">
-                <i class='bx bxs-droplet-half'></i>
-                <div class="details">
-                  <span>_</span>
-                  <p>Humidity</p>
-                </div>
-              </div>
+              <p>Feels like</p>
             </div>
-        </section>                 -->
+          </div>
+          <div class="column humidity">
+            <i class='bx bxs-droplet-half'></i>
+            <div class="details">
+              <span>18</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+        </div>
+      </section>                
     </div>
+    
+    <script>
+        const main = document.querySelector(".main"),
+        inputPart = main.querySelector(".input-part"),
+        infoTxt = inputPart.querySelector(".info-txt"),
+        inputField = inputPart.querySelector("input");
+
+
+        inputField.addEventListener("keyup", e => {
+          if (e.key == "Enter" && inputField.value != ""){
+          // if (e.key === "Enter" && cityName.value != ""){
+              getData(inputField.value);
+              // console.log ('Hello');
+              // getDate(cityName);
+            }
+          });
+          
+          
+          function getDate(input){
+            console.log (input);
+    
+          }
+          
+      // let cityName =document.getElementById("cityName");
+      // cityName.addEventListener("keydown", function (e){
+      //   if (e.key === "Enter" && cityName.value != ""){
+      //       console.log ('heoo');
+      //       // getDate(cityName);
+      //     }
+      //   });
+
+        // let cityName =input-part. .getElementById("cityName");
+        // cityName.addEventListener("keydown", function (e){
+        // if (e.key === "Enter" && cityName.value != ""){
+        //     console.log ('heoo');
+        //     // getDate(cityName);
+        //   }
+        // });
         
-        <!-- 891d7afbcb3bf4016229bdbf4f331e18 -->
-        <!-- <div class="result">
-                <p>Date & Time</p>
-                <p>Day Centi Grade & Night CentiGrade</p>
-                <p>Current CentiGrade</p>
-                <p>Feel Like:</p>
-                <p><img src="" alt="Weather Image"></p>
-        </div> -->
-</body>
-</html>
+        // function validate(e){
+        //     let text = e.target.value;
+        //     alert (text);
+        // }
+        
+            // axios.get(`https://api.weatherapi.com/v1/current.json?key=7bf713a100cb434db71182043222906&q=${cityName}&aqi=no`)
+            //     .then(function (response) {
+
+            //         let weatherData = response.data;
+
+            //         console.log(weatherData);
+            //         console.log(weatherData.current.humidity);
+            //         console.log(weatherData.current.temp_c);
+
+            //         console.log(weatherData.location.name);
+            //     })
+            //     .catch(function (error) {
+            //         // handle error
+            //         console.log(error);
+            //     })
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+  </html>
